@@ -1,0 +1,16 @@
+ion-item {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left; 
+  display: inline-flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+ion-list{
+  text-align: center;
+}
+app-circulo, app-triangulo {
+   position: relative; 
+   margin: 20px 0; text-align: center; width: 100%;}

@@ -1,0 +1,44 @@
+ion-card-subtitle {
+    color: #808080; 
+    font-family: Arial, sans-serif; 
+    font-weight: normal; 
+  }
+ion-card-header {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    padding-left: 20px; 
+  }
+
+.primerParrafo{
+    margin-left: 20px;
+    font-size: 1em;
+    text-align: left;
+}
+.texto-rojo-vino {
+    color: #b22234; 
+    font-weight: bold; 
+    text-align: left;
+    margin-left: 20px;
+  }
+  
+  .estilizado {
+    font-style: italic; 
+    font-weight: 900;
+    font-family: serif; 
+    font-size: 1.4em;
+    color: #9e1e2b;
+  }
+  .contenedor-flex {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    margin-bottom: 10px; 
+  }
+  .imagen-circulo {
+    width: 100px; /* Ajusta el ancho según sea necesario */
+    height: auto; /* Mantiene la proporción */
+    float: right; /* Para alinearla a la derecha */
+    margin-left: 15px; /* Para darle espacio al contenido */
+  }
+  

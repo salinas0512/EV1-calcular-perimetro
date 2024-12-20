@@ -1,0 +1,13 @@
+<ion-card>
+<ion-list>
+  <ion-item>
+    <ion-select [(ngModel)]="selectedFigura " placeholder="Escoja una figura geométrica">
+      <div slot="label">Figura Geométrica</div>
+      <ion-select-option value="circulo">Círculo</ion-select-option>
+      <ion-select-option value="triangulo">Triángulo</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+<ng-container *ngIf="selectedFigura === 'circulo'"> <app-circulo></app-circulo></ng-container>  <!-- Mostrar componente circulo cuando se seleccione la figura --> 
+<ng-container *ngIf="selectedFigura === 'triangulo'"> <app-triangulo></app-triangulo></ng-container> <!-- Mostrar componente Triangulo cuando se seleccione la figura --> 
+</ion-card>

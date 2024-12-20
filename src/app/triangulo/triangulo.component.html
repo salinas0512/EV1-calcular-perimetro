@@ -1,0 +1,75 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Triángulo</ion-card-title>
+    <ion-card-subtitle>Perímetro</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <p class="primerParrafo">
+      El perímetro de un triángulo es la suma de <br>
+      las longitudes de sus tres lados.
+      En otras <br>
+      palabras, es la medida total del contorno o <br>
+      borde del triángulo.
+    </p>
+    <div class="contenedor">
+    <ion-img 
+      src="assets/images/triangulo.png" 
+      alt="Imagen del triángulo" 
+      class="imagen-triangulo">
+    </ion-img>
+  </div>
+    <p class="segundoParrafo">
+      <span class="estilizado">p = a + b + c</span>
+    </p>
+  </ion-card-content>
+</ion-card>
+
+<ion-list lines="none">
+  <!-- Input para el lado a del triángulo -->
+  <ion-item>
+    <ion-input
+      label="Lado A (cm)"
+      label-placement="floating"
+      fill="solid"
+      placeholder="Ingresa el Lado a"
+      [(ngModel)]="ladoA"
+      name="ladoA"
+      type="number">
+    </ion-input>
+  </ion-item>
+
+  <!-- Input para el lado b del triángulo -->
+  <ion-item>
+    <ion-input
+      label="Lado B (cm)"
+      label-placement="floating"
+      fill="solid"
+      placeholder="Ingresa el Lado b"
+      [(ngModel)]="ladoB"
+      name="ladoB"
+      type="number">
+    </ion-input>
+  </ion-item>
+
+  <!-- Input para el lado c del triángulo -->
+  <ion-item>
+    <ion-input
+      label="Lado C (cm)"
+      label-placement="floating"
+      fill="solid"
+      placeholder="Ingresa el Lado c"
+      [(ngModel)]="ladoC"
+      name="ladoC"
+      type="number">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-button expand="block" (click)="calcularPerimetro()"[disabled]="!this.ladoA || !this.ladoB || !this.ladoC">
+      CALCULAR PERÍMETRO
+    </ion-button>
+  </ion-item>
+  <!-- Mostrar el resultado -->
+  <ion-item *ngIf="perimetro">
+    <ion-label class="lblResultado">El perímetro es: {{ perimetro }} cm</ion-label>
+  </ion-item>
+</ion-list>

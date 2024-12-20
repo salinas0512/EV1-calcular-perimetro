@@ -1,0 +1,39 @@
+ion-card-header {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  padding-left: 20px; 
+}
+ion-card-subtitle{
+  color: #959595;
+}
+.primerParrafo{
+  margin-left: 20px;
+  font-size: 1em;
+  text-align: left;
+  color: #959595;
+}
+.segundoParrafo{
+  margin-left: 20px;
+  font-size: 1em;
+  text-align: left;
+}
+.estilizado {
+  font-style: italic; 
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: black;
+}
+.imagen-triangulo{
+    width: 150px; /* Ajusta el ancho según sea necesario */
+    height: auto; /* Mantiene la proporción */
+  }
+  .contenedor{
+    display: flex; 
+    align-items:center;
+    justify-content: center;
+    margin-right: 37px; 
+  }
+.lblResultado{
+  margin-top: -15px;
+}

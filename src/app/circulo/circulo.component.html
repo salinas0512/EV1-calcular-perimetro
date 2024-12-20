@@ -1,0 +1,55 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Círculo</ion-card-title>
+    <ion-card-subtitle>Perímetro</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <!-- Primer párrafo -->
+    <p class="primerParrafo">
+      El perímetro de círculo es la longitud de <br> 
+      la línea que forma su borde.
+    </p>
+
+    <!-- Contenedor Flexbox para párrafo e imagen -->
+    <div class="contenedor-flex">
+      <!-- Segundo párrafo con estilo personalizado -->
+      <p class="texto-rojo-vino">
+        Donde:<br>
+        <span class="estilizado">P:</span> perímetro <br>
+        <span class="estilizado">d:</span> diámetro <br>
+        <span class="estilizado">r:</span> radio del círculo <br>
+        <span class="estilizado">&pi;:</span> 3.1416 <br>
+      </p>
+      <!-- Imagen alineada a la derecha -->
+      <ion-img 
+        src="assets/images/circulo.png" 
+        alt="Imagen del Círculo" 
+        class="imagen-circulo">
+      </ion-img>
+    </div>
+  </ion-card-content>
+</ion-card>
+
+<!-- List: Formulario y botón -->
+<ion-list lines="none">
+  <ion-item>
+    <ion-input
+      label="Radio (cm)"
+      label-placement="floating"
+      fill="solid"
+      placeholder="Ingresa el Radio"
+      [(ngModel)]="circulo.radio"
+      name="radio"
+      type="number">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-button expand="block" (click)="calcularPerimetro()" [disabled]="!circulo.radio">
+      CALCULAR EL PERÍMETRO
+    </ion-button>
+  </ion-item>
+  <!-- Mostrar resultado -->
+  <ion-item *ngIf="perimetro">
+    <ion-label>El perímetro es: {{ perimetro | number:'1.2-2' }} cm</ion-label>
+  </ion-item>
+</ion-list>
